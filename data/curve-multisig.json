@@ -1,0 +1,267 @@
+{
+  "name": "curve-multisig",
+  "safe_address": "0x6d447e544D01a59cb0774763bf15526574CffFeD",
+  "version": "1.3.0+L2",
+  "master_copy": "0xfb1bffC9d739B8D520DaF37dF666da4C687191EA",
+  "fallback_handler": "0xf48f2B2d2a534e402487b3ee7C18c33Aec0Fe5e4",
+  "salt_nonce": "0x212750009c25adf896576ce139ae8edcc0a82f1726db94d35039559b9841972e",
+  "threshold": 5,
+  "owners": [
+    "0xe9A65fe8190fA5A4b5E277b84f0aAce686FDc174",
+    "0x7A1057E6e9093DA9C1D4C1D049609B6889fC4c67",
+    "0x2b47C57A4c9Fc1649B43500f4c0cDa6cF29be278",
+    "0xDAa094A0Ed166FeDF8a0a4310f3F74a1e96F9195",
+    "0x99BC02c239025E431D5741cC1DbA8CE77fc51CE3",
+    "0xAF17517aCD484429fC0da2312fd1f42039592cd0",
+    "0xc6f3aAc21d8282f166938a8B30a9Ec62De30aCcC",
+    "0xAAc0aa431c237C2C0B5f041c8e59B3f1a43aC78F",
+    "0x8a7dbC2824AcaC4d272289a33b255C3F1f3cdf32"
+  ],
+  "baseline_safe": {
+    "name": "Curve Emergency DAO",
+    "chain": "ethereum",
+    "chain_id": 1,
+    "address": "0x467947EE34aF926cF1DCac093870f613C96B1E0c",
+    "docs_url": "https://docs.curve.finance/user/dao/emergency-dao/",
+    "version": "1.3.0",
+    "owners": [
+      "0xe9A65fe8190fA5A4b5E277b84f0aAce686FDc174",
+      "0x7A1057E6e9093DA9C1D4C1D049609B6889fC4c67",
+      "0x2b47C57A4c9Fc1649B43500f4c0cDa6cF29be278",
+      "0xDAa094A0Ed166FeDF8a0a4310f3F74a1e96F9195",
+      "0x99BC02c239025E431D5741cC1DbA8CE77fc51CE3",
+      "0xAF17517aCD484429fC0da2312fd1f42039592cd0",
+      "0xc6f3aAc21d8282f166938a8B30a9Ec62De30aCcC",
+      "0xAAc0aa431c237C2C0B5f041c8e59B3f1a43aC78F",
+      "0x8a7dbC2824AcaC4d272289a33b255C3F1f3cdf32"
+    ],
+    "threshold": 5,
+    "safe_client_url": "https://safe-client.safe.global/v1/chains/1/safes/0x467947EE34aF926cF1DCac093870f613C96B1E0c"
+  },
+  "chains": [
+    {
+      "chain": "arbitrum",
+      "chain_id": 42161,
+      "address": "0x6d447e544D01a59cb0774763bf15526574CffFeD",
+      "factory": "0xC22834581EbC8527d974F8a1c97E1bEA4EF910BC",
+      "singleton": "0xfb1bffC9d739B8D520DaF37dF666da4C687191EA",
+      "safe_client_url": "https://safe-client.safe.global/v1/chains/42161/safes/0x6d447e544D01a59cb0774763bf15526574CffFeD"
+    },
+    {
+      "chain": "aurora",
+      "chain_id": 1313161554,
+      "address": "0x6d447e544D01a59cb0774763bf15526574CffFeD",
+      "factory": "0xC22834581EbC8527d974F8a1c97E1bEA4EF910BC",
+      "singleton": "0xfb1bffC9d739B8D520DaF37dF666da4C687191EA",
+      "safe_client_url": "https://safe-client.safe.global/v1/chains/1313161554/safes/0x6d447e544D01a59cb0774763bf15526574CffFeD"
+    },
+    {
+      "chain": "avalanche",
+      "chain_id": 43114,
+      "address": "0x6d447e544D01a59cb0774763bf15526574CffFeD",
+      "factory": "0xC22834581EbC8527d974F8a1c97E1bEA4EF910BC",
+      "singleton": "0xfb1bffC9d739B8D520DaF37dF666da4C687191EA",
+      "safe_client_url": "https://safe-client.safe.global/v1/chains/43114/safes/0x6d447e544D01a59cb0774763bf15526574CffFeD"
+    },
+    {
+      "chain": "base",
+      "chain_id": 8453,
+      "address": "0x6d447e544D01a59cb0774763bf15526574CffFeD",
+      "factory": "0xC22834581EbC8527d974F8a1c97E1bEA4EF910BC",
+      "singleton": "0xfb1bffC9d739B8D520DaF37dF666da4C687191EA",
+      "safe_client_url": "https://safe-client.safe.global/v1/chains/8453/safes/0x6d447e544D01a59cb0774763bf15526574CffFeD"
+    },
+    {
+      "chain": "bsc",
+      "chain_id": 56,
+      "address": "0x6d447e544D01a59cb0774763bf15526574CffFeD",
+      "factory": "0xC22834581EbC8527d974F8a1c97E1bEA4EF910BC",
+      "singleton": "0xfb1bffC9d739B8D520DaF37dF666da4C687191EA",
+      "safe_client_url": "https://safe-client.safe.global/v1/chains/56/safes/0x6d447e544D01a59cb0774763bf15526574CffFeD"
+    },
+    {
+      "chain": "celo",
+      "chain_id": 42220,
+      "address": "0x6d447e544D01a59cb0774763bf15526574CffFeD",
+      "factory": "0xC22834581EbC8527d974F8a1c97E1bEA4EF910BC",
+      "singleton": "0xfb1bffC9d739B8D520DaF37dF666da4C687191EA",
+      "safe_client_url": "https://safe-client.safe.global/v1/chains/42220/safes/0x6d447e544D01a59cb0774763bf15526574CffFeD"
+    },
+    {
+      "chain": "ethereum",
+      "chain_id": 1,
+      "address": "0x6d447e544D01a59cb0774763bf15526574CffFeD",
+      "factory": "0xC22834581EbC8527d974F8a1c97E1bEA4EF910BC",
+      "singleton": "0xfb1bffC9d739B8D520DaF37dF666da4C687191EA",
+      "safe_client_url": "https://safe-client.safe.global/v1/chains/1/safes/0x6d447e544D01a59cb0774763bf15526574CffFeD"
+    },
+    {
+      "chain": "etherlink",
+      "chain_id": 42793,
+      "address": "0x6d447e544D01a59cb0774763bf15526574CffFeD",
+      "factory": "0xC22834581EbC8527d974F8a1c97E1bEA4EF910BC",
+      "singleton": "0xfb1bffC9d739B8D520DaF37dF666da4C687191EA",
+      "safe_client_url": "https://safe-client.safe.global/v1/chains/42793/safes/0x6d447e544D01a59cb0774763bf15526574CffFeD"
+    },
+    {
+      "chain": "fantom",
+      "chain_id": 250,
+      "address": "0x6d447e544D01a59cb0774763bf15526574CffFeD",
+      "factory": "0xC22834581EbC8527d974F8a1c97E1bEA4EF910BC",
+      "singleton": "0xfb1bffC9d739B8D520DaF37dF666da4C687191EA",
+      "safe_client_url": "https://safe-client.safe.global/v1/chains/250/safes/0x6d447e544D01a59cb0774763bf15526574CffFeD"
+    },
+    {
+      "chain": "fraxtal",
+      "chain_id": 252,
+      "address": "0x6d447e544D01a59cb0774763bf15526574CffFeD",
+      "factory": "0xC22834581EbC8527d974F8a1c97E1bEA4EF910BC",
+      "singleton": "0xfb1bffC9d739B8D520DaF37dF666da4C687191EA",
+      "safe_client_url": "https://safe-client.safe.global/v1/chains/252/safes/0x6d447e544D01a59cb0774763bf15526574CffFeD"
+    },
+    {
+      "chain": "gnosis",
+      "chain_id": 100,
+      "address": "0x6d447e544D01a59cb0774763bf15526574CffFeD",
+      "factory": "0xC22834581EbC8527d974F8a1c97E1bEA4EF910BC",
+      "singleton": "0xfb1bffC9d739B8D520DaF37dF666da4C687191EA",
+      "safe_client_url": "https://safe-client.safe.global/v1/chains/100/safes/0x6d447e544D01a59cb0774763bf15526574CffFeD"
+    },
+    {
+      "chain": "hyperliquid",
+      "chain_id": 999,
+      "address": "0x6d447e544D01a59cb0774763bf15526574CffFeD",
+      "factory": "0xC22834581EbC8527d974F8a1c97E1bEA4EF910BC",
+      "singleton": "0xfb1bffC9d739B8D520DaF37dF666da4C687191EA",
+      "safe_client_url": "https://safe-client.safe.global/v1/chains/999/safes/0x6d447e544D01a59cb0774763bf15526574CffFeD"
+    },
+    {
+      "chain": "ink",
+      "chain_id": 57073,
+      "address": "0x6d447e544D01a59cb0774763bf15526574CffFeD",
+      "factory": "0xC22834581EbC8527d974F8a1c97E1bEA4EF910BC",
+      "singleton": "0xfb1bffC9d739B8D520DaF37dF666da4C687191EA",
+      "safe_client_url": "https://safe-client.safe.global/v1/chains/57073/safes/0x6d447e544D01a59cb0774763bf15526574CffFeD"
+    },
+    {
+      "chain": "kava",
+      "chain_id": 2222,
+      "address": "0x6d447e544D01a59cb0774763bf15526574CffFeD",
+      "factory": "0xC22834581EbC8527d974F8a1c97E1bEA4EF910BC",
+      "singleton": "0xfb1bffC9d739B8D520DaF37dF666da4C687191EA",
+      "safe_client_url": "https://safe-client.safe.global/v1/chains/2222/safes/0x6d447e544D01a59cb0774763bf15526574CffFeD"
+    },
+    {
+      "chain": "mantle",
+      "chain_id": 5000,
+      "address": "0x6d447e544D01a59cb0774763bf15526574CffFeD",
+      "factory": "0xC22834581EbC8527d974F8a1c97E1bEA4EF910BC",
+      "singleton": "0xfb1bffC9d739B8D520DaF37dF666da4C687191EA",
+      "safe_client_url": "https://safe-client.safe.global/v1/chains/5000/safes/0x6d447e544D01a59cb0774763bf15526574CffFeD"
+    },
+    {
+      "chain": "monad",
+      "chain_id": 143,
+      "address": "0x6d447e544D01a59cb0774763bf15526574CffFeD",
+      "factory": "0xC22834581EbC8527d974F8a1c97E1bEA4EF910BC",
+      "singleton": "0xfb1bffC9d739B8D520DaF37dF666da4C687191EA",
+      "safe_client_url": "https://safe-client.safe.global/v1/chains/143/safes/0x6d447e544D01a59cb0774763bf15526574CffFeD"
+    },
+    {
+      "chain": "moonbeam",
+      "chain_id": 1284,
+      "address": "0xF7d12b935D95Eaa7D45C54f0fEfEd74cEe5D0302",
+      "factory": "0xa6B71E26C5e0845f74c812102Ca7114b6a896AB2",
+      "singleton": "0x3E5c63644E683549055b9Be8653de26E0B4CD36E",
+      "safe_client_url": "https://safe-client.safe.global/v1/chains/1284/safes/0xF7d12b935D95Eaa7D45C54f0fEfEd74cEe5D0302"
+    },
+    {
+      "chain": "mp1",
+      "chain_id": 21000000,
+      "address": "0x6d447e544D01a59cb0774763bf15526574CffFeD",
+      "factory": "0xC22834581EbC8527d974F8a1c97E1bEA4EF910BC",
+      "singleton": "0xfb1bffC9d739B8D520DaF37dF666da4C687191EA",
+      "safe_client_url": "https://safe-client.safe.global/v1/chains/21000000/safes/0x6d447e544D01a59cb0774763bf15526574CffFeD"
+    },
+    {
+      "chain": "optimism",
+      "chain_id": 10,
+      "address": "0x6d447e544D01a59cb0774763bf15526574CffFeD",
+      "factory": "0xC22834581EbC8527d974F8a1c97E1bEA4EF910BC",
+      "singleton": "0xfb1bffC9d739B8D520DaF37dF666da4C687191EA",
+      "safe_client_url": "https://safe-client.safe.global/v1/chains/10/safes/0x6d447e544D01a59cb0774763bf15526574CffFeD"
+    },
+    {
+      "chain": "plasma",
+      "chain_id": 9745,
+      "address": "0x6d447e544D01a59cb0774763bf15526574CffFeD",
+      "factory": "0xC22834581EbC8527d974F8a1c97E1bEA4EF910BC",
+      "singleton": "0xfb1bffC9d739B8D520DaF37dF666da4C687191EA",
+      "safe_client_url": "https://safe-client.safe.global/v1/chains/9745/safes/0x6d447e544D01a59cb0774763bf15526574CffFeD"
+    },
+    {
+      "chain": "plumephoenix",
+      "chain_id": 98866,
+      "address": "0x6d447e544D01a59cb0774763bf15526574CffFeD",
+      "factory": "0xC22834581EbC8527d974F8a1c97E1bEA4EF910BC",
+      "singleton": "0xfb1bffC9d739B8D520DaF37dF666da4C687191EA",
+      "safe_client_url": "https://safe-client.safe.global/v1/chains/98866/safes/0x6d447e544D01a59cb0774763bf15526574CffFeD"
+    },
+    {
+      "chain": "polygon",
+      "chain_id": 137,
+      "address": "0x6d447e544D01a59cb0774763bf15526574CffFeD",
+      "factory": "0xC22834581EbC8527d974F8a1c97E1bEA4EF910BC",
+      "singleton": "0xfb1bffC9d739B8D520DaF37dF666da4C687191EA",
+      "safe_client_url": "https://safe-client.safe.global/v1/chains/137/safes/0x6d447e544D01a59cb0774763bf15526574CffFeD"
+    },
+    {
+      "chain": "sonic",
+      "chain_id": 146,
+      "address": "0x6d447e544D01a59cb0774763bf15526574CffFeD",
+      "factory": "0xC22834581EbC8527d974F8a1c97E1bEA4EF910BC",
+      "singleton": "0xfb1bffC9d739B8D520DaF37dF666da4C687191EA",
+      "safe_client_url": "https://safe-client.safe.global/v1/chains/146/safes/0x6d447e544D01a59cb0774763bf15526574CffFeD"
+    },
+    {
+      "chain": "tac",
+      "chain_id": 239,
+      "address": "0x6d447e544D01a59cb0774763bf15526574CffFeD",
+      "factory": "0xC22834581EbC8527d974F8a1c97E1bEA4EF910BC",
+      "singleton": "0xfb1bffC9d739B8D520DaF37dF666da4C687191EA",
+      "safe_client_url": "https://safe-client.safe.global/v1/chains/239/safes/0x6d447e544D01a59cb0774763bf15526574CffFeD"
+    },
+    {
+      "chain": "taiko",
+      "chain_id": 167000,
+      "address": "0x6d447e544D01a59cb0774763bf15526574CffFeD",
+      "factory": "0xC22834581EbC8527d974F8a1c97E1bEA4EF910BC",
+      "singleton": "0xfb1bffC9d739B8D520DaF37dF666da4C687191EA",
+      "safe_client_url": "https://safe-client.safe.global/v1/chains/167000/safes/0x6d447e544D01a59cb0774763bf15526574CffFeD"
+    },
+    {
+      "chain": "unichain",
+      "chain_id": 130,
+      "address": "0x6d447e544D01a59cb0774763bf15526574CffFeD",
+      "factory": "0xC22834581EbC8527d974F8a1c97E1bEA4EF910BC",
+      "singleton": "0xfb1bffC9d739B8D520DaF37dF666da4C687191EA",
+      "safe_client_url": "https://safe-client.safe.global/v1/chains/130/safes/0x6d447e544D01a59cb0774763bf15526574CffFeD"
+    },
+    {
+      "chain": "xdc",
+      "chain_id": 50,
+      "address": "0x6d447e544D01a59cb0774763bf15526574CffFeD",
+      "factory": "0xC22834581EbC8527d974F8a1c97E1bEA4EF910BC",
+      "singleton": "0xfb1bffC9d739B8D520DaF37dF666da4C687191EA",
+      "safe_client_url": "https://safe-client.safe.global/v1/chains/50/safes/0x6d447e544D01a59cb0774763bf15526574CffFeD"
+    },
+    {
+      "chain": "xlayer",
+      "chain_id": 196,
+      "address": "0x6d447e544D01a59cb0774763bf15526574CffFeD",
+      "factory": "0xC22834581EbC8527d974F8a1c97E1bEA4EF910BC",
+      "singleton": "0xfb1bffC9d739B8D520DaF37dF666da4C687191EA",
+      "safe_client_url": "https://safe-client.safe.global/v1/chains/196/safes/0x6d447e544D01a59cb0774763bf15526574CffFeD"
+    }
+  ]
+}

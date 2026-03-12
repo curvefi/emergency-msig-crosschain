@@ -1,0 +1,12 @@
+[project]
+name = "crosschain-multisig"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "base58>=2.1.1",
+    "cryptography>=46.0.5",
+    "keyring>=25.7.0",
+    "web3>=7.14.1",
+]
