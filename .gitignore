@@ -10,5 +10,6 @@ wheels/
 .venv
 
 # Downloaded data
+data/chains.json
 data/deployment_state.json
 data/safe-networks.json

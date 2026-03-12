@@ -1,7 +1,7 @@
 from concurrent.futures import ThreadPoolExecutor, as_completed
 import json
 
-from download_data import load_deployment_state, load_safe_networks
+from download_data import load_chain_configs, load_deployment_state, load_safe_networks
 import plan_safe_replay as replay
 
 VERSION = "v1.3.0"
@@ -99,7 +99,7 @@ def baseline_state(manifest, configs, safe_networks, index):
 
 def build():
     manifest = replay.read_json(replay.DATA / "safe-replay.json")
-    configs = replay.read_json(replay.CHAIN_CONFIGS)["mainnets"] if replay.CHAIN_CONFIGS.exists() else {}
+    configs = load_chain_configs().get("mainnets", {})
     safe_networks = load_safe_networks()
     index = replay.index_networks(safe_networks)
     baseline = baseline_state(manifest, configs, safe_networks, index)

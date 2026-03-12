@@ -9,13 +9,10 @@ from pathlib import Path
 from web3 import HTTPProvider, Web3
 from web3.middleware import ExtraDataToPOAMiddleware
 
-from download_data import load_deployment_state, load_safe_networks
+from download_data import load_chain_configs, load_deployment_state, load_safe_networks
 
 ROOT = Path(__file__).resolve().parents[1]
 DATA = ROOT / "data"
-CHAIN_CONFIGS = (
-    ROOT.parent / "blockhash-oracle" / "scripts" / "chain-parse" / "chains.json"
-)
 ALIAS = {"hyperliquid": "HyperEVM", "mp1": "Corn", "plumephoenix": "Plume Mainnet"}
 FIELDS = ("chainSlug", "shortName", "name", "chain", "title")
 ZERO = "0x0000000000000000000000000000000000000000"
@@ -365,7 +362,7 @@ def assess(chain, config, item, manifest, source):
 
 def build_report():
     manifest = read_json(DATA / "safe-replay.json")
-    configs = read_json(CHAIN_CONFIGS)["mainnets"] if CHAIN_CONFIGS.exists() else {}
+    configs = load_chain_configs().get("mainnets", {})
     safe_networks = load_safe_networks()
     targets = sorted(load_deployment_state()["deployments"]["mainnets"])
     verification = verify_source_tx(manifest)

@@ -5,7 +5,7 @@ import re
 from pathlib import Path
 from urllib.parse import parse_qsl, urlencode, urlsplit, urlunsplit
 
-from download_data import load_safe_networks
+from download_data import load_chain_configs, load_safe_networks
 from web3 import HTTPProvider, Web3
 from web3.middleware import ExtraDataToPOAMiddleware
 
@@ -13,7 +13,6 @@ ROOT = Path(__file__).resolve().parents[1]
 DATA = ROOT / "data"
 CURVE = DATA / "curve-multisig.json"
 SAFE_REPLAY = DATA / "safe-replay.json"
-CHAIN_CONFIGS = ROOT.parent / "blockhash-oracle" / "scripts" / "chain-parse" / "chains.json"
 ALIAS = {"hyperliquid": "HyperEVM", "mp1": "Corn", "plumephoenix": "Plume Mainnet"}
 FIELDS = ("chainSlug", "shortName", "name", "chain", "title")
 MASK = "***"
@@ -173,7 +172,7 @@ def main():
     source = read_json(SAFE_REPLAY)
     expected_owners = [checksum(owner) for owner in manifest["owners"]]
     expected_threshold = manifest["threshold"]
-    configs = read_json(CHAIN_CONFIGS).get("mainnets", {}) if CHAIN_CONFIGS.exists() else {}
+    configs = load_chain_configs().get("mainnets", {})
     networks = load_safe_networks()
     index = index_networks(networks)
     baseline = assess_baseline(source["baseline"], expected_owners, expected_threshold, configs, networks, index)

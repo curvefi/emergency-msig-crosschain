@@ -34,12 +34,14 @@ The repo currently tracks one multisig family:
 ## Data inputs
 
 These large files are not meant to be committed:
+- `data/chains.json`
 - `data/safe-networks.json`
 - `data/deployment_state.json`
 
 They are auto-downloaded from:
 - Safe docs: `https://raw.githubusercontent.com/safe-global/safe-docs/main/components/SupportedNetworks/networks.json`
 - Curve blockhash-oracle: `https://raw.githubusercontent.com/curvefi/blockhash-oracle/main/scripts/deployment/deployment_state.json`
+- Curve blockhash-oracle chain configs: `https://raw.githubusercontent.com/curvefi/blockhash-oracle/main/scripts/chain-parse/chains.json`
 
 Fetch them explicitly:
 
@@ -135,15 +137,9 @@ The code supports two deployment modes:
 
 `parse_deployments.py` understands both patterns and writes the actual per-chain address, factory, and singleton into `curve-multisig.json`.
 
-## RPC dependency
+## RPC metadata
 
-The scripts prefer RPC metadata from the sibling repo:
-
-- `../blockhash-oracle/scripts/chain-parse/chains.json`
-
-That is where `ankr`, `drpc`, and public RPC preferences come from. Without it, the scripts still have Safe network metadata, but the current repo is not fully standalone.
-
-If you want to publish this repo as a standalone tool, vendor a small chain RPC config into this repo and remove the sibling dependency.
+The scripts use Curve's chain config JSON to prefer `ankr`, `drpc`, and public RPC endpoints. That file is downloaded into `data/chains.json` by `scripts/download_data.py`.
 
 ## Security notes
 

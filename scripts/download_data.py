@@ -13,6 +13,10 @@ SOURCES = {
         DATA / "deployment_state.json",
         "https://raw.githubusercontent.com/curvefi/blockhash-oracle/main/scripts/deployment/deployment_state.json",
     ),
+    "chain-configs": (
+        DATA / "chains.json",
+        "https://raw.githubusercontent.com/curvefi/blockhash-oracle/main/scripts/chain-parse/chains.json",
+    ),
 }
 
 
@@ -34,6 +38,10 @@ def load_safe_networks(refresh=False):
 
 def load_deployment_state(refresh=False):
     return load("deployment-state", refresh)
+
+
+def load_chain_configs(refresh=False):
+    return load("chain-configs", refresh)
 
 
 def main():

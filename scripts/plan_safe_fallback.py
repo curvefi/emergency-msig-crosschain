@@ -3,7 +3,7 @@ import json
 import os
 from urllib.parse import parse_qsl, urlencode, urlsplit, urlunsplit
 
-from download_data import load_deployment_state, load_safe_networks
+from download_data import load_chain_configs, load_deployment_state, load_safe_networks
 import plan_safe_replay as replay
 
 VERSION = "v1.3.0"
@@ -123,7 +123,7 @@ def assess(chain, config, item, manifest):
 
 def build_report():
     manifest = replay.read_json(replay.DATA / "safe-replay.json")
-    configs = replay.read_json(replay.CHAIN_CONFIGS)["mainnets"] if replay.CHAIN_CONFIGS.exists() else {}
+    configs = load_chain_configs().get("mainnets", {})
     safe_networks = load_safe_networks()
     index = replay.index_networks(safe_networks)
     results = []
