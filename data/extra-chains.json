@@ -1,0 +1,6 @@
+{
+  "_comment": "Curve chains that blockhash-oracle does not list. Chain id and RPC come from curvefi/curve-core deployments/prod/<chain>.yaml.",
+  "arc": {"chain_id": 5042, "public": "https://rpc.mainnet.arc.io"},
+  "robinhood": {"chain_id": 4663, "public": "https://rpc.mainnet.chain.robinhood.com"},
+  "stable": {"chain_id": 988, "public": "https://rpc.stable.xyz/"}
+}

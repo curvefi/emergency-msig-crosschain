@@ -18,7 +18,9 @@ def wanted(chain):
 
 
 def missing_chains():
-    deployed = {entry["chain"] for entry in replay.read_json(replay.DATA / "curve-multisig.json")["chains"]}
+    manifest = replay.read_json(replay.DATA / "curve-multisig.json")
+    # Ethereum is served by the baseline Safe and is not listed under chains.
+    deployed = {entry["chain"] for entry in manifest["chains"]} | {manifest["baseline_safe"]["chain"]}
     mainnets = sorted(load_deployment_state()["deployments"]["mainnets"])
     return [chain for chain in mainnets if chain not in deployed and wanted(chain)]
 

@@ -269,7 +269,10 @@ def source_state(manifest, configs, safe_networks):
         manifest["source"]["chain"], safe_index, safe_networks, manifest["source"]["chain_id"]
     )
     w3, rpc_url, chain_id = connect(
-        manifest["source"]["chain"], configs, source_item, manifest["source"]["chain_id"]
+        manifest["source"]["chain"],
+        configs.get(manifest["source"]["chain"], {}),
+        source_item,
+        manifest["source"]["chain_id"],
     )
     factory = w3.eth.contract(address=manifest["factory"], abi=FACTORY_ABI)
     creation_code = factory.functions.proxyCreationCode().call()
@@ -277,10 +280,8 @@ def source_state(manifest, configs, safe_networks):
     version = state["version"]
     if not manifest["source"]["version"].startswith(version):
         raise ValueError("source Safe version mismatch")
-    owners = state["owners"]
-    threshold = state["threshold"]
-    if owners != manifest["setup"]["owners"] or threshold != manifest["setup"]["threshold"]:
-        raise ValueError("source Safe owner state mismatch")
+    # The source Safe's owners have been rotated since creation, so its live owners no longer match
+    # the initializer. The predicted-address check in assess() ties the initializer to target_safe.
     factory_code, factory_hash = code_hash(w3, manifest["factory"])
     singleton_code, singleton_hash = code_hash(w3, manifest["singleton"])
     handler_code, handler_hash = code_hash(w3, manifest["fallback_handler"])
@@ -360,11 +361,19 @@ def assess(chain, config, item, manifest, source):
     }
 
 
+def load_extra_chains():
+    data = read_json(DATA / "extra-chains.json")
+    return {name: config for name, config in data.items() if not name.startswith("_")}
+
+
 def build_report():
     manifest = read_json(DATA / "safe-replay.json")
-    configs = load_chain_configs().get("mainnets", {})
+    extra = load_extra_chains()
+    configs = extra | load_chain_configs().get("mainnets", {})
     safe_networks = load_safe_networks()
-    targets = sorted(load_deployment_state()["deployments"]["mainnets"])
+    targets = sorted(set(load_deployment_state()["deployments"]["mainnets"]) | set(extra))
+    if decode_setup(manifest["initializer"]) != manifest["setup"] | {"fallback_handler": manifest["fallback_handler"]}:
+        raise ValueError("initializer does not decode to the manifest setup")
     verification = verify_source_tx(manifest)
     source = source_state(manifest, configs, safe_networks)
     results = []
@@ -374,6 +383,8 @@ def build_report():
         for chain in targets:
             declared = int(configs.get(chain, {}).get("chain_id", 0)) or None
             item = get_item(chain, index, safe_networks, declared)
+            if not item and declared:
+                item = {"chainId": declared, "rpc": []}
             if not item:
                 results.append(
                     {"chain": chain, "feasible": False, "reason": "missing Safe network metadata"}
