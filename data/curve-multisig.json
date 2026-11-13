@@ -1,5 +1,6 @@
 {
   "name": "curve-multisig",
+  "checked_at": "2026-11-13",
   "safe_address": "0x6d447e544D01a59cb0774763bf15526574CffFeD",
   "version": "1.3.0+L2",
   "master_copy": "0xfb1bffC9d739B8D520DaF37dF666da4C687191EA",
@@ -7,11 +8,11 @@
   "salt_nonce": "0x212750009c25adf896576ce139ae8edcc0a82f1726db94d35039559b9841972e",
   "threshold": 5,
   "owners": [
-    "0xe9A65fe8190fA5A4b5E277b84f0aAce686FDc174",
+    "0x4046B37Ffc36B0C723d7Fc64e0C763B698D81934",
     "0x7A1057E6e9093DA9C1D4C1D049609B6889fC4c67",
     "0x2b47C57A4c9Fc1649B43500f4c0cDa6cF29be278",
     "0xDAa094A0Ed166FeDF8a0a4310f3F74a1e96F9195",
-    "0x99BC02c239025E431D5741cC1DbA8CE77fc51CE3",
+    "0xBd0a74e51729a4D0B92742e67183C4cBc97bCA92",
     "0xAF17517aCD484429fC0da2312fd1f42039592cd0",
     "0xc6f3aAc21d8282f166938a8B30a9Ec62De30aCcC",
     "0xAAc0aa431c237C2C0B5f041c8e59B3f1a43aC78F",
@@ -25,18 +26,17 @@
     "docs_url": "https://docs.curve.finance/user/dao/emergency-dao/",
     "version": "1.3.0",
     "owners": [
-      "0xe9A65fe8190fA5A4b5E277b84f0aAce686FDc174",
+      "0x4046B37Ffc36B0C723d7Fc64e0C763B698D81934",
       "0x7A1057E6e9093DA9C1D4C1D049609B6889fC4c67",
       "0x2b47C57A4c9Fc1649B43500f4c0cDa6cF29be278",
       "0xDAa094A0Ed166FeDF8a0a4310f3F74a1e96F9195",
-      "0x99BC02c239025E431D5741cC1DbA8CE77fc51CE3",
+      "0xBd0a74e51729a4D0B92742e67183C4cBc97bCA92",
       "0xAF17517aCD484429fC0da2312fd1f42039592cd0",
       "0xc6f3aAc21d8282f166938a8B30a9Ec62De30aCcC",
       "0xAAc0aa431c237C2C0B5f041c8e59B3f1a43aC78F",
       "0x8a7dbC2824AcaC4d272289a33b255C3F1f3cdf32"
     ],
-    "threshold": 5,
-    "safe_client_url": "https://safe-client.safe.global/v1/chains/1/safes/0x467947EE34aF926cF1DCac093870f613C96B1E0c"
+    "threshold": 5
   },
   "chains": [
     {
@@ -45,7 +45,27 @@
       "address": "0x6d447e544D01a59cb0774763bf15526574CffFeD",
       "factory": "0xC22834581EbC8527d974F8a1c97E1bEA4EF910BC",
       "singleton": "0xfb1bffC9d739B8D520DaF37dF666da4C687191EA",
-      "safe_client_url": "https://safe-client.safe.global/v1/chains/42161/safes/0x6d447e544D01a59cb0774763bf15526574CffFeD"
+      "status": "synced"
+    },
+    {
+      "chain": "arc",
+      "chain_id": 5042,
+      "address": "0x6d447e544D01a59cb0774763bf15526574CffFeD",
+      "factory": "0xC22834581EbC8527d974F8a1c97E1bEA4EF910BC",
+      "singleton": "0xfb1bffC9d739B8D520DaF37dF666da4C687191EA",
+      "status": "outdated_owners",
+      "owners": [
+        "0xe9A65fe8190fA5A4b5E277b84f0aAce686FDc174",
+        "0x7A1057E6e9093DA9C1D4C1D049609B6889fC4c67",
+        "0x2b47C57A4c9Fc1649B43500f4c0cDa6cF29be278",
+        "0xDAa094A0Ed166FeDF8a0a4310f3F74a1e96F9195",
+        "0x99BC02c239025E431D5741cC1DbA8CE77fc51CE3",
+        "0xAF17517aCD484429fC0da2312fd1f42039592cd0",
+        "0xc6f3aAc21d8282f166938a8B30a9Ec62De30aCcC",
+        "0xAAc0aa431c237C2C0B5f041c8e59B3f1a43aC78F",
+        "0x8a7dbC2824AcaC4d272289a33b255C3F1f3cdf32"
+      ],
+      "threshold": 5
     },
     {
       "chain": "aurora",
@@ -53,7 +73,19 @@
       "address": "0x6d447e544D01a59cb0774763bf15526574CffFeD",
       "factory": "0xC22834581EbC8527d974F8a1c97E1bEA4EF910BC",
       "singleton": "0xfb1bffC9d739B8D520DaF37dF666da4C687191EA",
-      "safe_client_url": "https://safe-client.safe.global/v1/chains/1313161554/safes/0x6d447e544D01a59cb0774763bf15526574CffFeD"
+      "status": "outdated_owners",
+      "owners": [
+        "0xe9A65fe8190fA5A4b5E277b84f0aAce686FDc174",
+        "0x7A1057E6e9093DA9C1D4C1D049609B6889fC4c67",
+        "0x2b47C57A4c9Fc1649B43500f4c0cDa6cF29be278",
+        "0xDAa094A0Ed166FeDF8a0a4310f3F74a1e96F9195",
+        "0x99BC02c239025E431D5741cC1DbA8CE77fc51CE3",
+        "0xAF17517aCD484429fC0da2312fd1f42039592cd0",
+        "0xc6f3aAc21d8282f166938a8B30a9Ec62De30aCcC",
+        "0xAAc0aa431c237C2C0B5f041c8e59B3f1a43aC78F",
+        "0x8a7dbC2824AcaC4d272289a33b255C3F1f3cdf32"
+      ],
+      "threshold": 5
     },
     {
       "chain": "avalanche",
@@ -61,7 +93,7 @@
       "address": "0x6d447e544D01a59cb0774763bf15526574CffFeD",
       "factory": "0xC22834581EbC8527d974F8a1c97E1bEA4EF910BC",
       "singleton": "0xfb1bffC9d739B8D520DaF37dF666da4C687191EA",
-      "safe_client_url": "https://safe-client.safe.global/v1/chains/43114/safes/0x6d447e544D01a59cb0774763bf15526574CffFeD"
+      "status": "synced"
     },
     {
       "chain": "base",
@@ -69,7 +101,7 @@
       "address": "0x6d447e544D01a59cb0774763bf15526574CffFeD",
       "factory": "0xC22834581EbC8527d974F8a1c97E1bEA4EF910BC",
       "singleton": "0xfb1bffC9d739B8D520DaF37dF666da4C687191EA",
-      "safe_client_url": "https://safe-client.safe.global/v1/chains/8453/safes/0x6d447e544D01a59cb0774763bf15526574CffFeD"
+      "status": "synced"
     },
     {
       "chain": "bsc",
@@ -77,7 +109,7 @@
       "address": "0x6d447e544D01a59cb0774763bf15526574CffFeD",
       "factory": "0xC22834581EbC8527d974F8a1c97E1bEA4EF910BC",
       "singleton": "0xfb1bffC9d739B8D520DaF37dF666da4C687191EA",
-      "safe_client_url": "https://safe-client.safe.global/v1/chains/56/safes/0x6d447e544D01a59cb0774763bf15526574CffFeD"
+      "status": "synced"
     },
     {
       "chain": "celo",
@@ -85,15 +117,7 @@
       "address": "0x6d447e544D01a59cb0774763bf15526574CffFeD",
       "factory": "0xC22834581EbC8527d974F8a1c97E1bEA4EF910BC",
       "singleton": "0xfb1bffC9d739B8D520DaF37dF666da4C687191EA",
-      "safe_client_url": "https://safe-client.safe.global/v1/chains/42220/safes/0x6d447e544D01a59cb0774763bf15526574CffFeD"
-    },
-    {
-      "chain": "ethereum",
-      "chain_id": 1,
-      "address": "0x6d447e544D01a59cb0774763bf15526574CffFeD",
-      "factory": "0xC22834581EbC8527d974F8a1c97E1bEA4EF910BC",
-      "singleton": "0xfb1bffC9d739B8D520DaF37dF666da4C687191EA",
-      "safe_client_url": "https://safe-client.safe.global/v1/chains/1/safes/0x6d447e544D01a59cb0774763bf15526574CffFeD"
+      "status": "synced"
     },
     {
       "chain": "etherlink",
@@ -101,7 +125,19 @@
       "address": "0x6d447e544D01a59cb0774763bf15526574CffFeD",
       "factory": "0xC22834581EbC8527d974F8a1c97E1bEA4EF910BC",
       "singleton": "0xfb1bffC9d739B8D520DaF37dF666da4C687191EA",
-      "safe_client_url": "https://safe-client.safe.global/v1/chains/42793/safes/0x6d447e544D01a59cb0774763bf15526574CffFeD"
+      "status": "outdated_owners",
+      "owners": [
+        "0xe9A65fe8190fA5A4b5E277b84f0aAce686FDc174",
+        "0x7A1057E6e9093DA9C1D4C1D049609B6889fC4c67",
+        "0x2b47C57A4c9Fc1649B43500f4c0cDa6cF29be278",
+        "0xDAa094A0Ed166FeDF8a0a4310f3F74a1e96F9195",
+        "0x99BC02c239025E431D5741cC1DbA8CE77fc51CE3",
+        "0xAF17517aCD484429fC0da2312fd1f42039592cd0",
+        "0xc6f3aAc21d8282f166938a8B30a9Ec62De30aCcC",
+        "0xAAc0aa431c237C2C0B5f041c8e59B3f1a43aC78F",
+        "0x8a7dbC2824AcaC4d272289a33b255C3F1f3cdf32"
+      ],
+      "threshold": 5
     },
     {
       "chain": "fantom",
@@ -109,7 +145,19 @@
       "address": "0x6d447e544D01a59cb0774763bf15526574CffFeD",
       "factory": "0xC22834581EbC8527d974F8a1c97E1bEA4EF910BC",
       "singleton": "0xfb1bffC9d739B8D520DaF37dF666da4C687191EA",
-      "safe_client_url": "https://safe-client.safe.global/v1/chains/250/safes/0x6d447e544D01a59cb0774763bf15526574CffFeD"
+      "status": "outdated_owners",
+      "owners": [
+        "0xe9A65fe8190fA5A4b5E277b84f0aAce686FDc174",
+        "0x7A1057E6e9093DA9C1D4C1D049609B6889fC4c67",
+        "0x2b47C57A4c9Fc1649B43500f4c0cDa6cF29be278",
+        "0xDAa094A0Ed166FeDF8a0a4310f3F74a1e96F9195",
+        "0x99BC02c239025E431D5741cC1DbA8CE77fc51CE3",
+        "0xAF17517aCD484429fC0da2312fd1f42039592cd0",
+        "0xc6f3aAc21d8282f166938a8B30a9Ec62De30aCcC",
+        "0xAAc0aa431c237C2C0B5f041c8e59B3f1a43aC78F",
+        "0x8a7dbC2824AcaC4d272289a33b255C3F1f3cdf32"
+      ],
+      "threshold": 5
     },
     {
       "chain": "fraxtal",
@@ -117,7 +165,7 @@
       "address": "0x6d447e544D01a59cb0774763bf15526574CffFeD",
       "factory": "0xC22834581EbC8527d974F8a1c97E1bEA4EF910BC",
       "singleton": "0xfb1bffC9d739B8D520DaF37dF666da4C687191EA",
-      "safe_client_url": "https://safe-client.safe.global/v1/chains/252/safes/0x6d447e544D01a59cb0774763bf15526574CffFeD"
+      "status": "synced"
     },
     {
       "chain": "gnosis",
@@ -125,7 +173,7 @@
       "address": "0x6d447e544D01a59cb0774763bf15526574CffFeD",
       "factory": "0xC22834581EbC8527d974F8a1c97E1bEA4EF910BC",
       "singleton": "0xfb1bffC9d739B8D520DaF37dF666da4C687191EA",
-      "safe_client_url": "https://safe-client.safe.global/v1/chains/100/safes/0x6d447e544D01a59cb0774763bf15526574CffFeD"
+      "status": "synced"
     },
     {
       "chain": "hyperliquid",
@@ -133,7 +181,7 @@
       "address": "0x6d447e544D01a59cb0774763bf15526574CffFeD",
       "factory": "0xC22834581EbC8527d974F8a1c97E1bEA4EF910BC",
       "singleton": "0xfb1bffC9d739B8D520DaF37dF666da4C687191EA",
-      "safe_client_url": "https://safe-client.safe.global/v1/chains/999/safes/0x6d447e544D01a59cb0774763bf15526574CffFeD"
+      "status": "synced"
     },
     {
       "chain": "ink",
@@ -141,7 +189,7 @@
       "address": "0x6d447e544D01a59cb0774763bf15526574CffFeD",
       "factory": "0xC22834581EbC8527d974F8a1c97E1bEA4EF910BC",
       "singleton": "0xfb1bffC9d739B8D520DaF37dF666da4C687191EA",
-      "safe_client_url": "https://safe-client.safe.global/v1/chains/57073/safes/0x6d447e544D01a59cb0774763bf15526574CffFeD"
+      "status": "synced"
     },
     {
       "chain": "kava",
@@ -149,7 +197,19 @@
       "address": "0x6d447e544D01a59cb0774763bf15526574CffFeD",
       "factory": "0xC22834581EbC8527d974F8a1c97E1bEA4EF910BC",
       "singleton": "0xfb1bffC9d739B8D520DaF37dF666da4C687191EA",
-      "safe_client_url": "https://safe-client.safe.global/v1/chains/2222/safes/0x6d447e544D01a59cb0774763bf15526574CffFeD"
+      "status": "outdated_owners",
+      "owners": [
+        "0xe9A65fe8190fA5A4b5E277b84f0aAce686FDc174",
+        "0x7A1057E6e9093DA9C1D4C1D049609B6889fC4c67",
+        "0x2b47C57A4c9Fc1649B43500f4c0cDa6cF29be278",
+        "0xDAa094A0Ed166FeDF8a0a4310f3F74a1e96F9195",
+        "0x99BC02c239025E431D5741cC1DbA8CE77fc51CE3",
+        "0xAF17517aCD484429fC0da2312fd1f42039592cd0",
+        "0xc6f3aAc21d8282f166938a8B30a9Ec62De30aCcC",
+        "0xAAc0aa431c237C2C0B5f041c8e59B3f1a43aC78F",
+        "0x8a7dbC2824AcaC4d272289a33b255C3F1f3cdf32"
+      ],
+      "threshold": 5
     },
     {
       "chain": "mantle",
@@ -157,7 +217,7 @@
       "address": "0x6d447e544D01a59cb0774763bf15526574CffFeD",
       "factory": "0xC22834581EbC8527d974F8a1c97E1bEA4EF910BC",
       "singleton": "0xfb1bffC9d739B8D520DaF37dF666da4C687191EA",
-      "safe_client_url": "https://safe-client.safe.global/v1/chains/5000/safes/0x6d447e544D01a59cb0774763bf15526574CffFeD"
+      "status": "synced"
     },
     {
       "chain": "monad",
@@ -165,7 +225,7 @@
       "address": "0x6d447e544D01a59cb0774763bf15526574CffFeD",
       "factory": "0xC22834581EbC8527d974F8a1c97E1bEA4EF910BC",
       "singleton": "0xfb1bffC9d739B8D520DaF37dF666da4C687191EA",
-      "safe_client_url": "https://safe-client.safe.global/v1/chains/143/safes/0x6d447e544D01a59cb0774763bf15526574CffFeD"
+      "status": "synced"
     },
     {
       "chain": "moonbeam",
@@ -173,7 +233,19 @@
       "address": "0xF7d12b935D95Eaa7D45C54f0fEfEd74cEe5D0302",
       "factory": "0xa6B71E26C5e0845f74c812102Ca7114b6a896AB2",
       "singleton": "0x3E5c63644E683549055b9Be8653de26E0B4CD36E",
-      "safe_client_url": "https://safe-client.safe.global/v1/chains/1284/safes/0xF7d12b935D95Eaa7D45C54f0fEfEd74cEe5D0302"
+      "status": "outdated_owners",
+      "owners": [
+        "0xe9A65fe8190fA5A4b5E277b84f0aAce686FDc174",
+        "0x7A1057E6e9093DA9C1D4C1D049609B6889fC4c67",
+        "0x2b47C57A4c9Fc1649B43500f4c0cDa6cF29be278",
+        "0xDAa094A0Ed166FeDF8a0a4310f3F74a1e96F9195",
+        "0x99BC02c239025E431D5741cC1DbA8CE77fc51CE3",
+        "0xAF17517aCD484429fC0da2312fd1f42039592cd0",
+        "0xc6f3aAc21d8282f166938a8B30a9Ec62De30aCcC",
+        "0xAAc0aa431c237C2C0B5f041c8e59B3f1a43aC78F",
+        "0x8a7dbC2824AcaC4d272289a33b255C3F1f3cdf32"
+      ],
+      "threshold": 5
     },
     {
       "chain": "mp1",
@@ -181,7 +253,8 @@
       "address": "0x6d447e544D01a59cb0774763bf15526574CffFeD",
       "factory": "0xC22834581EbC8527d974F8a1c97E1bEA4EF910BC",
       "singleton": "0xfb1bffC9d739B8D520DaF37dF666da4C687191EA",
-      "safe_client_url": "https://safe-client.safe.global/v1/chains/21000000/safes/0x6d447e544D01a59cb0774763bf15526574CffFeD"
+      "status": "unreachable",
+      "last_read": null
     },
     {
       "chain": "optimism",
@@ -189,7 +262,7 @@
       "address": "0x6d447e544D01a59cb0774763bf15526574CffFeD",
       "factory": "0xC22834581EbC8527d974F8a1c97E1bEA4EF910BC",
       "singleton": "0xfb1bffC9d739B8D520DaF37dF666da4C687191EA",
-      "safe_client_url": "https://safe-client.safe.global/v1/chains/10/safes/0x6d447e544D01a59cb0774763bf15526574CffFeD"
+      "status": "synced"
     },
     {
       "chain": "plasma",
@@ -197,7 +270,7 @@
       "address": "0x6d447e544D01a59cb0774763bf15526574CffFeD",
       "factory": "0xC22834581EbC8527d974F8a1c97E1bEA4EF910BC",
       "singleton": "0xfb1bffC9d739B8D520DaF37dF666da4C687191EA",
-      "safe_client_url": "https://safe-client.safe.global/v1/chains/9745/safes/0x6d447e544D01a59cb0774763bf15526574CffFeD"
+      "status": "synced"
     },
     {
       "chain": "plumephoenix",
@@ -205,7 +278,19 @@
       "address": "0x6d447e544D01a59cb0774763bf15526574CffFeD",
       "factory": "0xC22834581EbC8527d974F8a1c97E1bEA4EF910BC",
       "singleton": "0xfb1bffC9d739B8D520DaF37dF666da4C687191EA",
-      "safe_client_url": "https://safe-client.safe.global/v1/chains/98866/safes/0x6d447e544D01a59cb0774763bf15526574CffFeD"
+      "status": "outdated_owners",
+      "owners": [
+        "0xe9A65fe8190fA5A4b5E277b84f0aAce686FDc174",
+        "0x7A1057E6e9093DA9C1D4C1D049609B6889fC4c67",
+        "0x2b47C57A4c9Fc1649B43500f4c0cDa6cF29be278",
+        "0xDAa094A0Ed166FeDF8a0a4310f3F74a1e96F9195",
+        "0x99BC02c239025E431D5741cC1DbA8CE77fc51CE3",
+        "0xAF17517aCD484429fC0da2312fd1f42039592cd0",
+        "0xc6f3aAc21d8282f166938a8B30a9Ec62De30aCcC",
+        "0xAAc0aa431c237C2C0B5f041c8e59B3f1a43aC78F",
+        "0x8a7dbC2824AcaC4d272289a33b255C3F1f3cdf32"
+      ],
+      "threshold": 5
     },
     {
       "chain": "polygon",
@@ -213,7 +298,27 @@
       "address": "0x6d447e544D01a59cb0774763bf15526574CffFeD",
       "factory": "0xC22834581EbC8527d974F8a1c97E1bEA4EF910BC",
       "singleton": "0xfb1bffC9d739B8D520DaF37dF666da4C687191EA",
-      "safe_client_url": "https://safe-client.safe.global/v1/chains/137/safes/0x6d447e544D01a59cb0774763bf15526574CffFeD"
+      "status": "synced"
+    },
+    {
+      "chain": "robinhood",
+      "chain_id": 4663,
+      "address": "0x6d447e544D01a59cb0774763bf15526574CffFeD",
+      "factory": "0xC22834581EbC8527d974F8a1c97E1bEA4EF910BC",
+      "singleton": "0xfb1bffC9d739B8D520DaF37dF666da4C687191EA",
+      "status": "outdated_owners",
+      "owners": [
+        "0xe9A65fe8190fA5A4b5E277b84f0aAce686FDc174",
+        "0x7A1057E6e9093DA9C1D4C1D049609B6889fC4c67",
+        "0x2b47C57A4c9Fc1649B43500f4c0cDa6cF29be278",
+        "0xDAa094A0Ed166FeDF8a0a4310f3F74a1e96F9195",
+        "0x99BC02c239025E431D5741cC1DbA8CE77fc51CE3",
+        "0xAF17517aCD484429fC0da2312fd1f42039592cd0",
+        "0xc6f3aAc21d8282f166938a8B30a9Ec62De30aCcC",
+        "0xAAc0aa431c237C2C0B5f041c8e59B3f1a43aC78F",
+        "0x8a7dbC2824AcaC4d272289a33b255C3F1f3cdf32"
+      ],
+      "threshold": 5
     },
     {
       "chain": "sonic",
@@ -221,7 +326,27 @@
       "address": "0x6d447e544D01a59cb0774763bf15526574CffFeD",
       "factory": "0xC22834581EbC8527d974F8a1c97E1bEA4EF910BC",
       "singleton": "0xfb1bffC9d739B8D520DaF37dF666da4C687191EA",
-      "safe_client_url": "https://safe-client.safe.global/v1/chains/146/safes/0x6d447e544D01a59cb0774763bf15526574CffFeD"
+      "status": "synced"
+    },
+    {
+      "chain": "stable",
+      "chain_id": 988,
+      "address": "0x6d447e544D01a59cb0774763bf15526574CffFeD",
+      "factory": "0xC22834581EbC8527d974F8a1c97E1bEA4EF910BC",
+      "singleton": "0xfb1bffC9d739B8D520DaF37dF666da4C687191EA",
+      "status": "outdated_owners",
+      "owners": [
+        "0xe9A65fe8190fA5A4b5E277b84f0aAce686FDc174",
+        "0x7A1057E6e9093DA9C1D4C1D049609B6889fC4c67",
+        "0x2b47C57A4c9Fc1649B43500f4c0cDa6cF29be278",
+        "0xDAa094A0Ed166FeDF8a0a4310f3F74a1e96F9195",
+        "0x99BC02c239025E431D5741cC1DbA8CE77fc51CE3",
+        "0xAF17517aCD484429fC0da2312fd1f42039592cd0",
+        "0xc6f3aAc21d8282f166938a8B30a9Ec62De30aCcC",
+        "0xAAc0aa431c237C2C0B5f041c8e59B3f1a43aC78F",
+        "0x8a7dbC2824AcaC4d272289a33b255C3F1f3cdf32"
+      ],
+      "threshold": 5
     },
     {
       "chain": "tac",
@@ -229,7 +354,19 @@
       "address": "0x6d447e544D01a59cb0774763bf15526574CffFeD",
       "factory": "0xC22834581EbC8527d974F8a1c97E1bEA4EF910BC",
       "singleton": "0xfb1bffC9d739B8D520DaF37dF666da4C687191EA",
-      "safe_client_url": "https://safe-client.safe.global/v1/chains/239/safes/0x6d447e544D01a59cb0774763bf15526574CffFeD"
+      "status": "outdated_owners",
+      "owners": [
+        "0xe9A65fe8190fA5A4b5E277b84f0aAce686FDc174",
+        "0x7A1057E6e9093DA9C1D4C1D049609B6889fC4c67",
+        "0x2b47C57A4c9Fc1649B43500f4c0cDa6cF29be278",
+        "0xDAa094A0Ed166FeDF8a0a4310f3F74a1e96F9195",
+        "0x99BC02c239025E431D5741cC1DbA8CE77fc51CE3",
+        "0xAF17517aCD484429fC0da2312fd1f42039592cd0",
+        "0xc6f3aAc21d8282f166938a8B30a9Ec62De30aCcC",
+        "0xAAc0aa431c237C2C0B5f041c8e59B3f1a43aC78F",
+        "0x8a7dbC2824AcaC4d272289a33b255C3F1f3cdf32"
+      ],
+      "threshold": 5
     },
     {
       "chain": "taiko",
@@ -237,7 +374,7 @@
       "address": "0x6d447e544D01a59cb0774763bf15526574CffFeD",
       "factory": "0xC22834581EbC8527d974F8a1c97E1bEA4EF910BC",
       "singleton": "0xfb1bffC9d739B8D520DaF37dF666da4C687191EA",
-      "safe_client_url": "https://safe-client.safe.global/v1/chains/167000/safes/0x6d447e544D01a59cb0774763bf15526574CffFeD"
+      "status": "synced"
     },
     {
       "chain": "unichain",
@@ -245,7 +382,7 @@
       "address": "0x6d447e544D01a59cb0774763bf15526574CffFeD",
       "factory": "0xC22834581EbC8527d974F8a1c97E1bEA4EF910BC",
       "singleton": "0xfb1bffC9d739B8D520DaF37dF666da4C687191EA",
-      "safe_client_url": "https://safe-client.safe.global/v1/chains/130/safes/0x6d447e544D01a59cb0774763bf15526574CffFeD"
+      "status": "synced"
     },
     {
       "chain": "xdc",
@@ -253,7 +390,7 @@
       "address": "0x6d447e544D01a59cb0774763bf15526574CffFeD",
       "factory": "0xC22834581EbC8527d974F8a1c97E1bEA4EF910BC",
       "singleton": "0xfb1bffC9d739B8D520DaF37dF666da4C687191EA",
-      "safe_client_url": "https://safe-client.safe.global/v1/chains/50/safes/0x6d447e544D01a59cb0774763bf15526574CffFeD"
+      "status": "synced"
     },
     {
       "chain": "xlayer",
@@ -261,7 +398,7 @@
       "address": "0x6d447e544D01a59cb0774763bf15526574CffFeD",
       "factory": "0xC22834581EbC8527d974F8a1c97E1bEA4EF910BC",
       "singleton": "0xfb1bffC9d739B8D520DaF37dF666da4C687191EA",
-      "safe_client_url": "https://safe-client.safe.global/v1/chains/196/safes/0x6d447e544D01a59cb0774763bf15526574CffFeD"
+      "status": "synced"
     }
   ]
 }

@@ -14,12 +14,17 @@ The repo currently tracks one multisig family:
 
 - [data/curve-multisig.json](data/curve-multisig.json)
   Generated manifest of deployed multisigs per chain. This is the main output artifact.
+  - `owners` and `threshold` are the current signers, read live from the Ethereum Emergency DAO Safe (`baseline_safe`). Ethereum itself uses `baseline_safe` and is not listed under `chains`.
+  - Each chain has a `status`: `synced` (same owner set and threshold as Ethereum), `outdated_owners` (owners or threshold differ; the chain's live `owners` and `threshold` are listed and a signer rotation is pending), or `unreachable` (the chain could not be read; the last known entry is kept, with `last_read` as the date of that reading when known).
+  - Every copy is created with the March 2026 setup in `data/safe-replay.json`, which is what reproduces the address.
 - [data/safe-replay.json](data/safe-replay.json)
   Source replay manifest: owners, threshold, fallback handler, singleton, salt, initializer, source tx.
+- [data/extra-chains.json](data/extra-chains.json)
+  Curve chains that blockhash-oracle does not list (Arc, Robinhood, Stable), with chain id and RPC from curve-core. The replay planner adds them to its targets.
 - [scripts/download_data.py](scripts/download_data.py)
   Downloads the large upstream JSON inputs when missing.
 - [scripts/parse_deployments.py](scripts/parse_deployments.py)
-  Rebuilds `curve-multisig.json` from onchain state and validates the signer set against the Curve Emergency DAO baseline Safe.
+  Rebuilds `curve-multisig.json` from onchain state and marks each chain's signers as synced or outdated against the Curve Emergency DAO baseline Safe.
 - [scripts/validate_simple.py](scripts/validate_simple.py)
   Validates deployed multisigs onchain by checking owners and threshold, and also checks the baseline Curve Emergency DAO Safe on Ethereum.
 - [scripts/plan_safe_replay.py](scripts/plan_safe_replay.py)
@@ -120,10 +125,18 @@ Limit deployment to specific chains:
 ONLY_CHAINS=moonbeam BROADCAST=1 uv run python scripts/deploy_safe_fallback.py
 ```
 
+Deploy the replay on the chains outside blockhash-oracle:
+
+```bash
+ONLY_CHAINS=arc,robinhood,stable BROADCAST=1 uv run python scripts/deploy_safe_replay.py
+```
+
 Both deploy scripts:
 - default to dry-run
 - ask for per-chain confirmation with `Deploy? [y/N]`
 - print the submitted tx hash immediately
+
+The replay deploy script also reads the new Safe back after each deployment and checks owners, threshold, singleton, fallback handler, guard, modules and nonce. A replayed Safe starts with the original March 2026 owners, so rotate it to the current signers before giving it any role.
 
 ## Current model
 

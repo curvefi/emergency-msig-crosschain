@@ -106,9 +106,7 @@ def connect(chain, chain_id, config, item):
 
 def assess(entry, expected_owners, expected_threshold, configs, networks, index):
     chain, chain_id, address = entry["chain"], entry["chain_id"], checksum(entry["address"])
-    item = get_item(chain, chain_id, networks, index)
-    if not item:
-        return {"chain": chain, "chain_id": chain_id, "deployed": False, "valid": False, "reason": "missing Safe network metadata"}
+    item = get_item(chain, chain_id, networks, index) or {"chainId": chain_id, "rpc": []}
     try:
         w3, rpc_url = connect(chain, chain_id, configs.get(chain, {}), item)
     except Exception as exc:
@@ -172,7 +170,8 @@ def main():
     source = read_json(SAFE_REPLAY)
     expected_owners = [checksum(owner) for owner in manifest["owners"]]
     expected_threshold = manifest["threshold"]
-    configs = load_chain_configs().get("mainnets", {})
+    extra = {name: config for name, config in read_json(DATA / "extra-chains.json").items() if not name.startswith("_")}
+    configs = extra | load_chain_configs().get("mainnets", {})
     networks = load_safe_networks()
     index = index_networks(networks)
     baseline = assess_baseline(source["baseline"], expected_owners, expected_threshold, configs, networks, index)
